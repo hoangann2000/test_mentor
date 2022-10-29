@@ -1,0 +1,80 @@
+.Rigister{
+    background-image: url(https://gstatic.gvn360.com/2021/09/Hoc-online_-24-7-scaled.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: top ;
+    display: flex;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .Rigister_content{
+        // border-radius: 15px;
+        border-radius: 15px;
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 25px 50px;
+        .right_top{
+            border-radius: 15px;
+            background: rgba(20, 21, 18, 0.5);
+            h1{
+                color: white;
+                font-weight: 700;
+                margin-left: 15px;
+                text-align: center;
+                font-size: 25px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        .form_rigister{
+            padding-top: 20px;
+            .form-group{
+                margin: 0 auto;
+                width: 350px;
+                margin-bottom: 10px;
+                input{
+                    border-radius: 7px;
+                }
+                label{
+                    margin-bottom: 0;
+                    font-weight: 500;
+                    font-size: 16px;
+                }
+            }
+            .form__footer {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                button{
+                    margin-right: 20px;
+                    margin-left: 20px;
+                    margin-top: 20px;
+                    padding: 10px;
+                    width: 100%;
+                    border-radius: 10px;
+                    font-size: 18px;
+                    background-color: rgb(15, 133, 15);
+                    &:hover {
+                        background-color: rgb(64, 183, 64);
+                    }
+                }
+                p {
+                    font-size: 18px;
+                    font-weight: 400;
+                }
+                .footer_logo{
+                    display: flex;
+                    i {
+                        font-size: 35px;
+                        padding: 0 10px;
+                    }
+                }
+            }
+           
+        }
+    }
+}
