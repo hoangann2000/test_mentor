@@ -14,7 +14,7 @@ export const singUpAction = (data) => {
             // console.log(result)
             alert('success');
             history.push('/singin')
-            window.location.reload()
+            // window.location.reload()
         } catch (error) {
             console.log(error);
             alert(error.response.data.message

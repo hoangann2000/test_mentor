@@ -15,16 +15,16 @@ export default function Register() {
     const dispatch = useDispatch()
     const formik = useFormik({
         initialValues: {
-            taiKhoan: '',
-            matKhau: '',
+            name: '',
+            passWord: '',
             email: '',
-            soDt: '',
+            phoneNumber: '',
         },
         validationSchema: Yup.object({
-            taiKhoan: Yup.string().required("Tài khoản không được để trống").min(6, "Tối thiểu đủ 6 kí tự").max(20, "Tối đa 10 kí tự").matches(/^[A-Z a-z]+$/, "Tài khoản không được có kí tự đặc biệt"),
-            matKhau: Yup.string().required("Mật khẩu không được để trống"),
+            name: Yup.string().required("Tài khoản không được để trống").min(6, "Tối thiểu đủ 6 kí tự").max(20, "Tối đa 10 kí tự").matches(/^[A-Z a-z]+$/, "Tài khoản không được có kí tự đặc biệt"),
+            passWord: Yup.string().required("Mật khẩu không được để trống"),
             email: Yup.string().required("Email không để trống").email("Email không đúng format"),
-            soDt: Yup.string().required("Số điện thoại không để trống"),
+            phoneNumber: Yup.string().required("Số điện thoại không để trống"),
 
         }),
         onSubmit: values => {
@@ -42,11 +42,11 @@ export default function Register() {
                         </div>
                         <form onSubmit={formik.handleSubmit} className='form_rigister'>
                             <div className="form-group">
-                                <label htmlFor="taiKhoan">Name</label>
+                                <label htmlFor="name">Name</label>
                                 <input onChange={formik.handleChange}
-                                    value={formik.values.taiKhoan} type="text" className="form-control" id="taiKhoan" name='taiKhoan' placeholder="name" />
-                                {formik.touched.taiKhoan && formik.errors.taiKhoan ? (
-                                    <div className="text-danger">{formik.errors.taiKhoan}</div>
+                                    value={formik.values.name} type="text" className="form-control" id="name" name='name' placeholder="name" />
+                                {formik.touched.name && formik.errors.name ? (
+                                    <div className="text-danger">{formik.errors.name}</div>
                                 ) : null}
                             </div>
                             <div className="form-group">
@@ -58,19 +58,19 @@ export default function Register() {
                                 ) : null}
                             </div>
                             <div className="form-group">
-                                <label htmlFor="soDt">phone number</label>
+                                <label htmlFor="phoneNumber">phone number</label>
                                 <input onChange={formik.handleChange}
-                                    value={formik.values.soDt} type="text" className="form-control" id="soDt" name='soDt' placeholder="phone number" />
-                                {formik.touched.soDt && formik.errors.soDt ? (
-                                    <div className="text-danger">{formik.errors.soDt}</div>
+                                    value={formik.values.phoneNumber} type="text" className="form-control" id="phoneNumber" name='phoneNumber' placeholder="phone number" />
+                                {formik.touched.phoneNumber && formik.errors.phoneNumber ? (
+                                    <div className="text-danger">{formik.errors.phoneNumber}</div>
                                 ) : null}
                             </div>
                             <div className="form-group">
-                                <label htmlFor="matKhau">password</label>
+                                <label htmlFor="passWord">password</label>
                                 <input onChange={formik.handleChange}
-                                    value={formik.values.matKhau} type="password" className="form-control" id="matKhau" name='matKhau' placeholder="password" />
-                                {formik.touched.matKhau && formik.errors.matKhau ? (
-                                    <div className="text-danger">{formik.errors.matKhau}</div>
+                                    value={formik.values.passWord} type="password" className="form-control" id="passWord" name='passWord' placeholder="password" />
+                                {formik.touched.passWord && formik.errors.passWord ? (
+                                    <div className="text-danger">{formik.errors.passWord}</div>
                                 ) : null}
                             </div>
                             <div className='form__footer'>
